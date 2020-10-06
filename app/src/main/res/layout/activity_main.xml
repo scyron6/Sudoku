@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="SUDOKU"
+        android:textColor="#247ef1"
+        android:textSize="56dp" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:layout_marginHorizontal="48dp"
+        android:backgroundTint="#247ef1"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="PLAY"
+        android:textSize="24dp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/optionsButton"
+        android:layout_below="@+id/playButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="64dp"
+        android:backgroundTint="#01e8f0"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="OPTIONS"
+        android:textSize="24dp"
+        android:textColor="@android:color/white"
+        android:clickable="true"
+        android:onClick="optionsMenu"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/optionsTitle"
+        android:text="OPTIONS"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textSize="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#247ef1" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/optionsTitle"
+        android:id="@+id/size"
+        android:text="SIZE"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sizeOptions"
+        android:layout_below="@+id/size"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/four"
+        android:text="4x4"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorAccent"
+        app:strokeColor="@android:color/black"
+        app:strokeWidth="0dp"
+        android:onClick="setSize"
+        android:tag="4"/>
+    
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nine"
+        android:text="9x9"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textSize="18dp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/colorAccent"
+        app:strokeColor="@android:color/black"
+        app:strokeWidth="2dp"
+        android:onClick="setSize"
+        android:tag="9"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sizeOptions"
+        android:id="@+id/difficulty"
+        android:text="DIFFICULTY"
+        android:fontFamily="@font/alfa_slab_one"
+        android:textSize="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/difficultyOptions"
+        android:layout_below="@+id/difficulty"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp">
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/easy"
+            android:text="EASY"
+            android:fontFamily="@font/alfa_slab_one"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorAccent"
+            app:strokeColor="@android:color/black"
+            app:strokeWidth="0dp"
+            android:onClick="setDifficulty"
+            android:tag="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/medium"
+            android:text="MEDIUM"
+            android:fontFamily="@font/alfa_slab_one"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/colorAccent"
+            app:strokeColor="@android:color/black"
+            app:strokeWidth="2dp"
+            android:onClick="setDifficulty"
+            android:tag="2"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hard"
+            android:text="HARD"
+            android:fontFamily="@font/alfa_slab_one"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/colorAccent"
+            app:strokeColor="@android:color/black"
+            app:strokeWidth="0dp"
+            android:onClick="setDifficulty"
+            android:tag="3"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
