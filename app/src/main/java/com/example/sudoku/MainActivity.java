@@ -54,40 +54,16 @@ public class MainActivity extends AppCompatActivity {
         medium = (MaterialButton) options_menu.findViewById(R.id.medium);
         hard = (MaterialButton) options_menu.findViewById(R.id.hard);
 
-        if (size == 9) {
-            nine.setStrokeWidth(5);
-            four.setStrokeWidth(0);
-        }
-        else {
-            nine.setStrokeWidth(0);
-            four.setStrokeWidth(5);
-        }
-
-        if (difficulty == 1) {
-            easy.setStrokeWidth(5);
-            medium.setStrokeWidth(0);
-            hard.setStrokeWidth(0);
-        }
-        else if (difficulty == 2) {
-            easy.setStrokeWidth(0);
-            medium.setStrokeWidth(5);
-            hard.setStrokeWidth(0);
-        }
-        else {
-            easy.setStrokeWidth(0);
-            medium.setStrokeWidth(0);
-            hard.setStrokeWidth(5);
-        }
+        setSize(size);
+        setDifficulty(difficulty);
 
         dialogBuilder.setView(options_menu);
         dialog = dialogBuilder.create();
         dialog.show();
     }
 
-    public void setSize(View v) {
-        int pass = Integer.parseInt(v.getTag().toString());
-        size = pass;
-        if (size == 9) {
+    public void setSize(int pass) {
+        if (pass == 9) {
             nine.setStrokeWidth(5);
             four.setStrokeWidth(0);
         }
@@ -97,17 +73,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void setSize(View v) {
+        size = Integer.parseInt(v.getTag().toString());
+        setSize(size);
+    }
 
-    public void setDifficulty(View v) {
-        int pass = Integer.parseInt(v.getTag().toString());
-        difficulty = pass;
+    public void setDifficulty(int pass) {
 
-        if (difficulty == 1) {
+        if (pass == 1) {
             easy.setStrokeWidth(5);
             medium.setStrokeWidth(0);
             hard.setStrokeWidth(0);
         }
-        else if (difficulty == 2) {
+        else if (pass == 2) {
             easy.setStrokeWidth(0);
             medium.setStrokeWidth(5);
             hard.setStrokeWidth(0);
@@ -117,6 +95,12 @@ public class MainActivity extends AppCompatActivity {
             medium.setStrokeWidth(0);
             hard.setStrokeWidth(5);
         }
+    }
+
+    public void setDifficulty(View v) {
+        difficulty = Integer.parseInt(v.getTag().toString());
+        setDifficulty(difficulty);
+
     }
 
 }
