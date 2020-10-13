@@ -20,8 +20,8 @@
         android:layout_weight="7">
 
         <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/sudokuGrid"
             android:gravity="center"
             android:layout_gravity="center">
@@ -68,7 +68,9 @@
                 android:fontFamily="@font/alfa_slab_one"
                 android:backgroundTint="@android:color/white"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24dp" />
+                android:textSize="24dp"
+                android:tag="2"
+                android:onClick="setSpot"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,7 +80,9 @@
                 android:fontFamily="@font/alfa_slab_one"
                 android:backgroundTint="@android:color/white"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24dp"/>
+                android:textSize="24dp"
+                android:tag="3"
+                android:onClick="setSpot"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,7 +92,9 @@
                 android:fontFamily="@font/alfa_slab_one"
                 android:backgroundTint="@android:color/white"
                 android:textColor="@color/colorPrimary"
-                android:textSize="24dp"/>
+                android:textSize="24dp"
+                android:tag="4"
+                android:onClick="setSpot"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

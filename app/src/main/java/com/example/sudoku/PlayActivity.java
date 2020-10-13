@@ -106,16 +106,49 @@ public class PlayActivity extends AppCompatActivity {
         //Dynamically create the board
         for (int a = 0; a < size; a++) {
             TableRow newRow = new TableRow(this);
-            newRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                    TableRow.LayoutParams.WRAP_CONTENT, 1));
+
+            TableLayout.LayoutParams params = new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT,
+                    TableLayout.LayoutParams.WRAP_CONTENT, 1);
+
+            if (size == 4 && a == 2) {
+                params.setMargins(0, 15, 0 , 0);
+            }
+            else if (size == 4) {
+                params.setMargins(0, 2, 0, 0);
+            }
+
+            if (size == 9 && (a == 3 || a == 6)) {
+                params.setMargins(0, 15, 0, 0);
+            }
+            else if (size == 9) {
+                params.setMargins(0,2,0,0);
+            }
+
+            newRow.setLayoutParams(params);
+            newRow.setGravity(16);
             newRow.setId(-a-3);
 
             //add buttons to the row
             for (int b = 0; b < size; b++) {
                 Button button_00 = new Button(this);
 
-                button_00.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                        TableRow.LayoutParams.WRAP_CONTENT, 1));
+                TableRow.LayoutParams params1 = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                        TableRow.LayoutParams.WRAP_CONTENT, 1);
+                if (size == 4 && b == 2) {
+                    params1.setMargins(25, 0, 0, 0);
+                }
+                else if (size == 4) {
+                    params1.setMargins(10, 0, 0, 0);
+                }
+
+                if (size == 9 && (b == 3 || b == 6)) {
+                    params1.setMargins(25, 0,0,0);
+                }
+                else if (size == 9) {
+                    params1.setMargins(10,0,0,0);
+                }
+                button_00.setLayoutParams(params1);
+
 
                 button_00.setId((a*size) + b);
                 button_00.setTag((a*size) + b);
@@ -156,7 +189,7 @@ public class PlayActivity extends AppCompatActivity {
                     button_00.setBackgroundColor(Color.parseColor("#247ef1"));
                     button_00.setTextColor(Color.WHITE);
                     button_00.setTypeface(typeface);
-                    button_00.setTextSize(20);
+                    button_00.setTextSize(18);
                     button_00.setText(grid.get((a*size) + b));
                 }
 
@@ -180,7 +213,7 @@ public class PlayActivity extends AppCompatActivity {
             button.setBackgroundColor(Color.parseColor("#e3e2e7"));
         }
         else {
-            button.setTextSize(20);
+            button.setTextSize(18);
             button.setBackgroundColor(Color.parseColor("#247ef1"));
         }
     }
